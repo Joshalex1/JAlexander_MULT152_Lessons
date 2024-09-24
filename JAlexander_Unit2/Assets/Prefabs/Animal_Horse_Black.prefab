@@ -1003,6 +1003,8 @@ GameObject:
   - component: {fileID: 5687697473879510692}
   - component: {fileID: 5687697473573311684}
   - component: {fileID: 1395417330}
+  - component: {fileID: -1966361169389698525}
+  - component: {fileID: -7971353699851539085}
   m_Layer: 0
   m_Name: Animal_Horse_Black
   m_TagString: Untagged
@@ -1075,6 +1077,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90d49e72eca8f4772ba32f6b761a4398, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &-1966361169389698525
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5687697473886872752}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 22.890387, y: 40.460945, z: 44.316612}
+  m_Center: {x: -0.99419594, y: 15.760303, z: 4.625721}
+--- !u!114 &-7971353699851539085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5687697473886872752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc824875c961d461eab7033287d6a3fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5687697473886872902
@@ -1896,8 +1923,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 5687697473887118122}
   m_AABB:
-    m_Center: {x: 0, y: -0.8832464, z: 11.784651}
-    m_Extent: {x: 5.571748, y: 18.315586, z: 21.710882}
+    m_Center: {x: 0, y: -0.8832493, z: 11.784651}
+    m_Extent: {x: 5.571748, y: 19.682886, z: 21.710882}
   m_DirtyAABB: 0
 --- !u!1 &5687697473886905814
 GameObject:
