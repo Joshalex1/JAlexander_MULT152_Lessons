@@ -10,11 +10,15 @@ public class playercontroller : MonoBehaviour
     private bool onGround = true;
     public bool gameOver = false;
 
+    private Animator animplayer;
+
     // Start is called before the first frame update
     void Start()
     {
        rbPlayer = GetComponent<Rigidbody>();
         Physics.gravity *= gravityModifier;
+
+        animplayer = GetComponent<Animator>();
 
    
     }
@@ -23,10 +27,11 @@ public class playercontroller : MonoBehaviour
     void Update()
     {
         bool spaceDown = Input.GetKeyDown(KeyCode.Space);
-            if (spaceDown && onGround)
+            if (spaceDown && onGround && !gameOver)
         {
             rbPlayer.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             onGround = false;
+            animplayer.SetTrigger("Jump_trig");
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -40,6 +45,9 @@ public class playercontroller : MonoBehaviour
         { 
 
             Debug.Log("Game Over!!!");
+            gameOver = true;
+            animplayer.SetBool("Death_b" ,true);
+            animplayer.SetInteger("DeathType_int", 2);
         }
     }
 }
