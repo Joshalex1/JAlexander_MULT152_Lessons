@@ -185,6 +185,11 @@ LightingSettings:
   m_PVRFilteringAtrousPositionSigmaIndirect: 2
   m_PVRFilteringAtrousPositionSigmaAO: 1
   m_PVRTiledBaking: 0
+--- !u!1 &172288621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7035103255641804364, guid: 5c670882e635f43489156dfaef074679, type: 3}
+  m_PrefabInstance: {fileID: 7035103256488368263}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &245963551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -395,6 +400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 3305068665327243289, guid: 2c29ce468d5a145fb8799f95dc4ea4bb, type: 3}
+  poweUpPrefab: {fileID: 172288621}
 --- !u!4 &1112054360
 Transform:
   m_ObjectHideFlags: 0
