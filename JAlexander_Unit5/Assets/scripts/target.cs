@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class target : MonoBehaviour
 {
@@ -48,16 +49,29 @@ public class target : MonoBehaviour
     }
 
 
-     void OnMouseDown()
+  private   void OnMouseDown()
 
     {
-        gameManager.UpdateScore(pointValue);
-        Instantiate(explostion, transform.position, explostion.transform.rotation);
-        Destroy(gameObject);
+        if (gameManager.gameActive)
+        {
+            gameManager.UpdateScore(pointValue);
+            Instantiate(explostion, transform.position, explostion.transform.rotation);
+            Destroy(gameObject);
+        }
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
+
         Destroy(gameObject);
+        if (!gameObject.CompareTag("hazard"))
+        {
+            gameManager.GameOver();
+        }
+    }
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
